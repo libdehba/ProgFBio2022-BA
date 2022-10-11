@@ -1,0 +1,299 @@
+    1  cd /bin/
+    2  ls
+    3  ls -l
+    4  ls -lt
+    5  ls -lt | head
+    6  cd
+    7  pwd
+    8  ls -l
+    9  ls -lt
+   10  ls -lt | head
+   11  ls -lt | head -2 
+   12  cd
+   13  date ; sleep 2 ; date
+   14  pwd
+   15  ls -1
+   16  bin
+   17  cd
+   18  curl -0https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   19  curl -0 https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   20  cd ~
+   21  grep Chr9 cufdiff.txt >> fav_chr_cuffdiff.txt
+   22  cd~
+   23  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   24  cd~
+   25  curl -0 https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   26  ls
+   27  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   28  cd ~
+   29  history
+   30  curl -0 https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   31  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txto
+   32  ls
+   33  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   34  ls
+   35  grep Chr7 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   36  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   37  grep Chr6 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   38  ls
+   39  cat cuffdiff.txt
+   40  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   41  cat fav_chr_cuffdiff.txt
+   42  grep Chr9 cuffdiff.txt > AR_NtsR2.txt
+   43  ls
+   44  cat AR_NtsR2.txt
+   45  mv AR_NtsR2.txt GL_NtsR1.txt
+   46  ls
+   47  GL_NtsR1.txt >> JC_Cdx2
+   48  grep GL_NtsR1 >> JC_Cdx2
+   49  grep GL_NtsR1 >> JC_Cdx2
+   50  grep GL_NtsR1.txt >> JC_Cdx2.txt
+   51  grep Chr9  GL_NtsR1.txt >> JC_Cdx2.txt
+   52  ls
+   53  cat blablabla.txt
+   54  cat blablabla.txt 2> errors.txt
+   55  cat blablabla.txt > errors.txt
+   56  cat GL_NtsR1.txt blablabla.file
+   57  cat GL_NtsR1.txt blablabla.file 1> out.txt 2> err.txt
+   58  cat GL_NtsR1.txt blablabla.file > out.txt 2> err.txt
+   59  cat GL_NtsR1.txt blablabla.file &> all_out_err.txt
+   60  ls
+   61  cd
+   62  cd..
+   63  cd ..
+   64  ls
+   65  mkdir problemsets
+   66  cd
+   67  cd
+   68  mkdir problemsets
+   69  pwd
+   70  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa 
+   71  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   72  wc
+   73  wc --line
+   74  wc --lines
+   75  ls
+   76  wc --lines sequences.nt.fa
+   77  wc -l sequences.nt.fa
+   78  wc -lines sequences.nt.fa
+   79  man wc
+   80  wc -w sequences.nt.fa
+   81  head file sequences.nt.fa
+   82  tail file sequences.nt.fa
+   83  grep > sequences.nt.fa
+   84  grep ">" sequences.nt.fa
+   85  ls
+   86  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa
+   87  grep ">" sequences.nt.fa
+   88  mv sequences.nt.fa cancer_genes.fasta
+   89  ls
+   90  curl -O https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt
+   91  tail file cuffdiff.txt
+   92  sort cuffdiff.txt "log2(fold_change)"
+   93  ls
+   94  head cuffdiff.txt
+   95  column -t cuffdiff.txt
+   96  head cuffdiff.txt | column -t
+   97  sort -k 10 cuffdiff.txt 
+   98  sort -k 10 cuffdiff.txt | column -t
+   99  sort -k 10 -r cuffdiff.txt | column -t
+  100  sort -k 10 -r cuffdiff.txt | column -t | head
+  101  sort -k 10 -r cuffdiff.txt | column -t | head -100
+  102  sort -k 10 -r cuffdiff.txt | column -t | head -5
+  103  sort -k 10 -r cuffdiff.txt | column -t | head -100
+  104  sort -k 10 -r cuffdiff.txt | column -t | head -100 > top100.sorted.cuffdiff.out
+  105  ls
+  106  head
+  107  head top100.sorted.cuffduff.out
+  108  head top100.sorted.cuffdiuff.out
+  109  head top100.sorted.cuffdiff.out
+  110  history
+  111  history > History101022.txt
+  112  ls
+  113  cd
+  114  pwd
+  115  cd
+  116  mkdir ProgFBop2022-BA
+  117  cd
+  118  mv ProgFBop2022-BA ProgFBio2022-BA
+  119  cd ProgFBio2022-BA
+  120  git init
+  121  git remode add
+  122  git remote add origin git@github.com:libdehba/ProgFBio2022-BA.git
+  123  git add README.md
+  124  echo "# ProgFBio2022-BA" >> README.md
+  125  git add README.md
+  126  git commit -m "first commit"
+  127  git branch -M main
+  128  git push -u origin main
+  129  $ ssh-keygen -t ed25519 -C "libdehba@msu.edu"
+  130  ssh-keygen -t ed25519 -C "libdehba@msu.edu"
+  131  eval "$(ssh-agent -s)"
+  132  open ~/.ssh/config
+  133  touch ~/.ssh/config
+  134  vi(ProgFBio2022-BA)
+  135  vi progFBio2022-BA
+  136  vi ~/.ssh/config
+  137  vi git_exercises.txt
+  138  git add git_exercises.txt
+  139  vi git_exercises.txt
+  140  git add git_exercises.txt
+  141  git commit -m 'added a line of text'
+  142  git push origin main
+  143  vi /Users/students/.ssh/config
+  144  vi /Users/student/.ssh/config
+  145  git push
+  146  git push -u origin main
+  147  ls ~/.ssh
+  148  ls
+  149  history
+  150  cd
+  151  ls
+  152  cd ProgFBio2022-BA
+  153  ls -al
+  154  mv Prog* ~/.ssh
+  155  vi ~/.ssh/config
+  156  git push -u origin main
+  157  cat ~/.ssh/ProgFBio2022-BA.pub
+  158  git push -u origin main
+  159  touch test
+  160  git add test
+  161  git commit -m 'test'
+  162  git push
+  163  files
+  164  git int problemset
+  165  git problemset
+  166  git status
+  167  git remote add
+  168  vi git_exercises.txt
+  169  git push origin main
+  170  vi problemsets
+  171  git add filename
+  172  git add problemsets
+  173  get commit
+  174  git commit
+  175  ls
+  176  cd problemsets
+  177  cat problemsets
+  178  ls ..
+  179  cp ../cancer_genes.fasta .
+  180  ls
+  181  git add cancer_genes.fasta
+  182  git commit
+  183  git push
+  184  vi git_mysequences.txt
+  185  cd
+  186  ls
+  187  vi git_mysequences.txt
+  188  vi mysequences.txt
+  189  vi git_mysequences.txt
+  190  locate mysequences.txt
+  191  ls
+  192  vi mysequences.txt
+  193  cd
+  194  cd ProgFBio2022-BA
+  195  ls
+  196  vi git_mysequences.txt
+  197  vi git_mysequences.txt
+  198  git add
+  199  gid add git_mysequences.txt
+  200  git add git_mysequences.txt
+  201  git commit git_mysequences.txt
+  202  git push git_mysequences.txt
+  203  git pull
+  204  git status
+  205  git push
+  206  mkdir fastas
+  207  ls
+  208  cd fastas
+  209  ls
+  210  cp cancer_genes.fasta
+  211  ls
+  212  git mv cancer_genes.fasta fasta
+  213  git mv cancer_genes.fasta fastas
+  214  cd
+  215  cd fastas
+  216  mkdir fastas
+  217  ls
+  218  cd ProgFBio2022-BA
+  219  cd fastas
+  220  pwd
+  221  locate cancer_genes.fasta
+  222  pwd
+  223  cd
+  224  locate cancer_genes
+  225  ls
+  226  ls -lG
+  227  pwd
+  228  cp cancer_gene.fasta fastas
+  229  cp cancer_genes.fasta fastas
+  230  ls
+  231  cd fastas
+  232  ls
+  233  cd ..
+  234  ls /fastas
+  235  ls fastas
+  236  rm cancer_genes.fasta
+  237  ls
+  238  ls -l
+  239  cd ProgFBio2022-BA
+  240  ls
+  241  cd fastas
+  242  ls
+  243  cp cancer_genes.fasta fastas
+  244  cd ..
+  245  ls
+  246  cp cancer_genes.fasta fastas
+  247  ls
+  248  cd fastas
+  249  ls
+  250  cd ..
+  251  rm cancer_genes.fasta
+  252  ls
+  253  cd fastas
+  254  ls
+  255  git add
+  256  git add cancer_genes.fasta
+  257  git commit -m 'adding cancer genes'
+  258  git push 
+  259  cd ..
+  260  git rm cancer_genes.fasta
+  261  get commit -m 'deleting duplicate file'
+  262  git commit -m 'deleting duplicate'
+  263  git push
+  264  cd
+  265  vi oops
+  266  mv oops ProgFBio2022-BA
+  267  cd ProgFBio2022-BA
+  268  ls
+  269  git add oops
+  270  git commit -m 'oops file problem 15'
+  271  git push
+  272  git rm oops
+  273  git commit oops
+  274  git push
+  275  vi oops2
+  276  git add oops2
+  277  git commit -m 'Prob 16 Unit 2'
+  278  git push
+  279  rm oops2
+  280  git add oops2
+  281  git commit -m 'removing oops2'
+  282  git pus
+  283  git push
+  284  vi never
+  285  git add never
+  286  git reset never
+  287  git status
+  288  rm never
+  289  git status
+  290  history
+  291  history 1
+  292  cd ..
+  293  vi unixbasics.history.txt
+  294  cat unixbasics.history.txt
+  295  history 1 > unixbasics.history.txt
+  296  cat unixbasics.history.txt
+  297  vi newfile_prob19
+  298  history 1 > newfile_prob19
+  299  cat newfile_prob19
