@@ -22,7 +22,9 @@ else:
 
 
 #Problem 4-8 (nested test)
-TestNum = int (sys.argv[1])
+TestNum = int (sys.argv[1]) 
+TestNum2 = int (sys.argv[2])
+TestVar = (sys.argv[3])
 print (TestNum)
 if TestNum < 0:
   print('Negative')
@@ -37,9 +39,14 @@ else:
   else:
    print('it is larger than 50')
    if TestNum / 3 ==111:
-    print('it is divisible by 3')  
-
-
-
+    print('it is divisible by 3')
+print (TestNum2)  
+if TestNum2 ==0:
+  print('All Done')
+elif TestNum2 > 40:
+  print('its an elif:')
+else:
+  print('yay')
+print (TestVar)
 # Problem 9
 
