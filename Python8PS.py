@@ -8,7 +8,7 @@ import re
 #myFoods
 #{'breakfasts': {'sweet': 'pancakes', 'savory': 'toast', 'delicious': 'bagel'}, 'lunches': {'sweet': 'fruit salad', 'savory': 'sandwich', 'delicious': 'soup'}}
 #>>> myFoods['breakfasts']
-#{'sweet': 'pancakes', 'savory': 'toast', 'delicious': 'bagel'}
+#i{'sweet': 'pancakes', 'savory': 'toast', 'delicious': 'bagel'}
 #>>> myFoods['breakfast']['sweet']
 #Traceback (most recent call last):
 #  File "<stdin>", line 1, in <module>
@@ -44,13 +44,14 @@ with open ('../Python_08.fasta','r') as prob1:
          if nt == 'C':
            (seqs[gene_id]['C']) +=1
 
-print(seqs)
-
-
+print(seqs[gene_id]['A'])
+print(seqs[gene_id]['T'])
+print(seqs[gene_id]['G'])
+print(seqs[gene_id]['C'])
 
 
 #_____________
-#Q2: 
+#Q2:I accidentaly used the input data from problem 1 in PS 10. Redo this this problem with the correct input data 
 
 dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGC    TCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTC    AGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGA    TGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACA    CCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCT'
   
@@ -80,6 +81,61 @@ print(dna_list)
       
       
 #______________________
+#PS 8 Q2: 
+
+codons = {}
+#codons is a dict of a list
+nts = {}
+#a dict of dict
+
+with open ('../Python_08.fasta','r') as prob2:
+  for line in prob2:
+    line = line.rstrip()
+    if re.search ('>', line):
+        gene_id = line
+        nts[gene_id] = {'A' : 0 , 'T' : 0 , 'C' : 0 , 'G' : 0}
+        codons[gene_id] = {} 
+#the above creates lists inside another dict
+        codons[gene_id]['Frame1'] = []
+        codons[gene_id]['Frame2'] = []
+        codons[gene_id]['Frame3'] = []
+#Thus far, ive opened a dict and inside that dict I want to call gene-id my key with my value being the sequence.But i need to do further work on the sequence to break it into codons. If my line has > in the file, I assigned it to the key of the dict and placed it in my outer dict. 
+    else: 
+        nucleotides = line
+        for nt in nucleotides:
+          nts[gene_id][nt] +=1     
+        codons[gene_id]['Frame1'].append(re.findall(r'...', nucleotides)) 
+        codons[gene_id]['Frame2'].append(re.findall(r'...', nucleotides[1:])) 
+        codons[gene_id]['Frame3'].append(re.findall(r'...', nucleotides[2:])) 
+#          if count2 == 3:
+#            codon_list.append(codon.join(codon_list)) 
+#            codon = ''
+#            codon_list = []
+#          else:
+#            codon_list.append(nt)
+#            print(codon_list)
+#            count2 +=1 
+print(codons)
+print(nts)
+
+
+
+#            if nt == 'A':
+#              (seqs[gene_id]['A']) +=1
+#            if nt == 'T':
+#              (seqs[gene_id]['T']) +=1
+#            if nt == 'C':
+#              (seqs[gene_id]['C']) +=1
+#            if nt == 'G':
+#              (seqs[gene_id]['G']) +=1
+              
+
+
+#at this point ive just assigned my dictionary and key. Next is to tell it to read in codons
+#        for nt in nucleotides:
+#          if count == 3:
+            
+#print(seq[gene_id]['A']
 
 
 
