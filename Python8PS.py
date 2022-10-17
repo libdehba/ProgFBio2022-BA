@@ -49,6 +49,36 @@ print(seqs)
 
 
 
+#_____________
+#Q2: 
+
+  dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGC    TCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTC    AGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGA    TGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACA    CCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCT'
+  
+  
+  dna_list = []
+  codon = '' 
+  count = 0
+  junior_list = []
+  for nt in dna: 
+  #the following line says that im starting to build my string. so my codon includes my first nt in my dna string
+      if count == 3:
+  #we assign the codon to the dict once it counts 3 nt (goes through the loop 3X)
+  #After i assign my codon to my dict, i need to clean my string and counter again 
+        dna_list.append(codon.join(junior_list))
+        codon =''
+        count = 0
+        junior_list = []
+      else:  
+        junior_list.append(nt)
+        print(junior_list)      
+  #now i need to add the second nt to my previous line by using the count fxn. I need to do that 3 times. Then i ne    ed to tell it if it gets to 3 then you need to start a new codon
+        count += 1
+  print(dna_list)
+  
+  #print(dna_list)
+      
+      
+#______________________
 
 
 
