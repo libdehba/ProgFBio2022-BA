@@ -81,7 +81,7 @@ print(dna_list)
       
       
 #______________________
-#PS 8 Q2: 
+#PS 8 Q3:
 
 codons = {}
 #codons is a dict of a list
